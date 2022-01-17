@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html slick-uniqueid="3" class=" " lang="zh-CN">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <!--pjax强制重载-->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="format-detection" content="telphone=no,email=no">
+    <meta name="keywords" content="UESTX">
+    <meta name="description" itemprop="description" content="UESTX">
+    <!-- 允许访问站外资源 -->
+    <meta name="referrer" content="same-origin">
+    <link rel="icon" type="image/x-icon" href="https://www.zerolite.cn/wp-content/uploads/2020/08/cropped-favicon.bmp">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" type="text/css" href="UESTX_files/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="UESTX_files/style.css">
+    <title>UESTX - UESTC Global HomePage</title>
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="stylesheet" id="fontawe-css" href="UESTX_files/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" id="kratos-css" href="UESTX_files/kratos.css" type="text/css" media="all">
+    <link rel="icon" href="https://www.zerolite.cn/wp-content/uploads/2020/09/cropped-cropped-favicon-180x180-1-e1598932124854-192x192.bmp" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://www.zerolite.cn/wp-content/uploads/2020/09/cropped-cropped-favicon-180x180-1-e1598932124854-180x180.bmp">
+    <meta name="msapplication-TileImage" content="https://www.zerolite.cn/wp-content/uploads/2020/09/cropped-cropped-favicon-180x180-1-e1598932124854-270x270.bmp">
+    <script type="text/javascript" src="UESTX_files/jquery.js" id="theme-jq-js"></script>
+
+    <style>
+        #offcanvas-menu{background:#3a3f51}
+        .affix{top:61px}
+        .kratos-cover.kratos-cover_2{background-image:url(https://oss.zerolite.cn/BANNER-3.png)}
+        @media(max-width:768px){
+            .kratos-cover.kratos-cover_2{background-image:url(https://oss.zerolite.cn/background-3.jpg)}
+            .modal-content {width: 1000px;}
+        }
+        @media(max-width:768px){
+            #kratos-header-section{display:none}nav#offcanvas-menu{top:0;padding-top:190px;}
+            .kratos-cover .desc.desc2{margin-top:-55px}
+        }
+        @media(min-width:768px){
+            .pagination>li>a{background-color:rgba(255,255,255,.9)}
+            .comment-list .children li{background-color:rgba(255,253,232,.7)!important}
+            .theme-bg{background-image:url(https://oss.zerolite.cn/bg2-2.jpg);background-size:cover;background-attachment:fixed}
+        }
+        @media(max-width:768px){
+            .theme-bg{background-image:url(https://oss.zerolite.cn/bg2-2.jpg);background-position: center center;top:0;}
+        }
+
+        .cardhover{
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius:7px;
+            height: 100px;
+            margin:1.5%;
+            width:22%;
+            position:relative;
+            box-shadow:0 0 6px rgba(0,0,0,.2);
+            transition:.3s ease box-shadow;}
+        .card-thumb{opacity: 0.9;border-top-left-radius: 7px;border-top-right-radius: 7px;transition: all 0.5s;width:100%;height:50%;background-position:center;background-repeat:no-repeat;background-size:cover}
+        /* 弹窗 (background) */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: absolute; 
+            z-index: 10; 
+            padding-top: 9%; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            border-radius: 20px;
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        /* 弹窗内容 */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            height: 800px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        @media(max-width:768px){
+            .modal-content {            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 90%;
+            height: 650px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s}
+            .bgm-item-titlemain {text-overflow: ellipsis;color: #004098;font-weight: 500;font-size: 17px;text-shadow: 1px 1px 1px #dbdbdb;margin-bottom:8px;border-bottom: 2px solid #5a7fb8;}
+        }
+
+        /* 添加动画 */
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0} 
+            to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        /* 关闭按钮 */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #0077ed;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .modal-body {padding: 2px 16px;}
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #0077ed;
+            border-radius: 20px;
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="UESTX_files/animate.css">
+</head>
+<body data-rsssl="1">
+    <div class="theme-bg"></div>
+    <div id="kratos-wrapper" style="left: 0px; position: relative;">
+        <div class="kratos-start kratos-hero-2">
+            <div class="kratos-overlay"></div>
+            <div class="kratos-cover kratos-cover_2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="https://www.zerolite.cn/"><h2>UESTX</h2><br><span>UESTC Global HomePage</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="container" class="container" style="text-align: center;">
+            <div class="page-header"></div>
+            
+            <div class="bilibili" style="text-align: center;">
+                <a class="bgm-item" id = "login">
+                    <div class="bgm-item-thumb" style="background-image:url(https://bkimg.cdn.bcebos.com/pic/2f738bd4b31c8701a18b3b071935892f0708293851b5)"></div>
+                    <div class="bgm-item-info">
+                        <span class="bgm-item-titlemain">主站登录</span>
+                        <span class="bgm-item-title" style="text-shadow: 1px 1px 3px #243e4271;">登录电子科技大学校园通行证账号服务<br/>只有登陆你的个人身份账号后才能使用下方的相关服务</span>
+                    </div>
+                </a>
+
+                <a class="bgm-item" id = "course">
+                    <div class="bgm-item-thumb" style="background-image:url(UESTX_files/pic/jiaowu.jpg)"></div>
+                    <div class="bgm-item-info">
+                        <span class="bgm-item-titlemain">教务/课程</span>
+                        <span class="bgm-item-title" style="text-shadow: 1px 1px 3px #243e4271;">包含学校的所有课程/教务系统<br/>如课程表、选课、我的成绩、成绩单导出、考试查询等服务。</span>
+                    </div>
+                </a>
+
+                <a class="bgm-item" id = "campus">
+                    <div class="bgm-item-thumb" style="background-image:url(UESTX_files/pic/campus.jpg)"></div>
+                    <div class="bgm-item-info">
+                        <span class="bgm-item-titlemain">校园生活</span>
+                        <span class="bgm-item-title" style="text-shadow: 1px 1px 3px #243e4271;">校园生活的一切服务都在这里<br/>包含所有后勤服务（如班车预约、校园卡充值、后勤报修等）以及请销假、疫情填报等功能。</span>
+                    </div>
+                </a>
+
+                <a class="bgm-item" id = "network">
+                    <div class="bgm-item-thumb" style="background-image:url(UESTX_files/pic/mail.jpg)"></div>
+                    <div class="bgm-item-info">
+                        <span class="bgm-item-titlemain">网络服务</span>
+                        <span class="bgm-item-title" style="text-shadow: 1px 1px 3px #243e4271;">包含所有电子科技大学网络服务端口<br/>包括且不限于校园邮箱、学校VPN、VI系统、正版软件服务以及网络自服务等服务页面。</span>
+                    </div>
+                </a>
+                
+                <a class="bgm-item" id = "academic">
+                    <div class="bgm-item-thumb" style="background-image:url(UESTX_files/pic/library.jpg)"></div>
+                    <div class="bgm-item-info">
+                        <span class="bgm-item-titlemain">科研/数据</span>
+                        <span class="bgm-item-title" style="text-shadow: 1px 1px 3px #243e4271;">学校的所有科研相关服务<br/>包括大创中心、自习室预定及图书馆官网、中国知网与万方数据库等文献服务。</span>
+                    </div>
+                </a>
+                
+                <a class="bgm-item" id = "passport">
+                    <div class="bgm-item-thumb" style="background-image:url(UESTX_files/pic/dachuang.jpg)"></div>
+                    <div class="bgm-item-info">
+                        <span class="bgm-item-titlemain">通行证</span>
+                        <span class="bgm-item-title" style="text-shadow: 1px 1px 3px #243e4271;">学校各个校门的通行二维码<br/><br/>一键进出校门(Wechat Only)</span>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer" style="background:rgba(35,40,45,1)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                        <p> © 2022 <a href="https://www.zerolite.cn/">ZEROLITE</a>. 保留所有权利<br>本站已运行<span id="span_dt_dt">----天--小时--分--秒</span><br>Theme <a href="https://xiaoyou66.com/%e6%9c%ac%e7%ab%99%e4%b8%bb%e9%a2%98%e6%ad%a3%e5%bc%8f%e5%bc%80%e6%ba%90%ef%bc%81/" target="_blank" rel="nofollow">Kratos</a> Made by <a href="https://www.fczbl.vip/" target="_blank" rel="nofollow">moedog</a> Modified by <a href="https://www.zerolite.cn/" target="_blank" rel="nofollow">JimHan</a> <br><!--  站长统计-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 弹窗系统 -->
+    <div id="model_login" class="modal">
+    <!-- 登录-弹窗内容 -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>主站登录</h2>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <div class="cardhover" style="width:96%;height:400px;margin-top: 15%;" onclick="window.open('https://idas.uestc.edu.cn/authserver/login');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/login.jpg)"></div>
+                <br/><br/><span class="bgm-item-titlemain">点击后，在新窗口进行登录</span></div>
+            
+        </div>
+        </div>
+    </div>
+
+    <div id="model_course" class="modal">
+    <!-- 课程-弹窗内容 -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>教务/课程</h2>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/courseTableForStd.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/courses.jpg)"></div>
+                <span class="bgm-item-titlemain">我的课表</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/stdExamTable.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/courses.jpg)"></div>
+                <span class="bgm-item-titlemain">我的考试</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/teach/grade/usual/usual-grade-std.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/courses.jpg)"></div>
+                <span class="bgm-item-titlemain">平时成绩</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/teach/grade/course/person.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/courses.jpg)"></div>
+                <span class="bgm-item-titlemain">我的成绩</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/teach/grade/transcript/studentGradePrint.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/courses.jpg)"></div>
+                <span class="bgm-item-titlemain">成绩打印</span></div>
+        <br/><br/>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/stdElectCourse.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jiaowu.jpg)"></div>
+                <span class="bgm-item-titlemain">选课</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/stdElectLog.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jiaowu.jpg)"></div>
+                <span class="bgm-item-titlemain">选课日志</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/evaluate.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jiaowu.jpg)"></div>
+                <span class="bgm-item-titlemain">评教</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/stdTextbookOrderLine.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jiaowu.jpg)"></div>
+                <span class="bgm-item-titlemain">教材订购</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/publicSearch.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jiaowu.jpg)"></div>
+                <span class="bgm-item-titlemain">开课查询</span></div>
+        <br/><br/>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/teach/grade/transcript/stdFinal.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/grade.jpg)"></div>
+                <span class="bgm-item-titlemain">已修学分</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/examDelayApply.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/grade.jpg)"></div>
+                <span class="bgm-item-titlemain">缓考申请</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('http://eams.uestc.edu.cn/eams/stdDetail.action');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/grade.jpg)"></div>
+                <span class="bgm-item-titlemain">我的学籍</span></div>
+        <br/><br/>
+            <div class="cardhover" style="float: left;" onclick="window.open('https://jzsz.uestc.edu.cn/information-center/center/index.html?appId=2');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jzsz.jpg)"></div>
+                <span class="bgm-item-titlemain">信息采集</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('https://jzsz.uestc.edu.cn/ceping/index.html?appId=10');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jzsz.jpg)"></div>
+                <span class="bgm-item-titlemain">综测系统</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('https://jzsz.uestc.edu.cn/scholarship/index.html?appId=3');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jzsz.jpg)"></div>
+                <span class="bgm-item-titlemain">奖学金</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('https://jzsz.uestc.edu.cn/school-growth-file/html/student/welcome');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jzsz.jpg)"></div>
+                <span class="bgm-item-titlemain">成长档案</span></div>
+        <br/><br/>
+            <div class="cardhover" style="float: left;" onclick="window.open('https://www.jwc.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jwc.jpg)"></div>
+                <span class="bgm-item-titlemain">教务处</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('https://www.jwc.uestc.edu.cn/info/1224');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jwc.jpg)"></div>
+                <span class="bgm-item-titlemain">校历</span></div>
+            <div class="cardhover" style="float: left;" onclick="window.open('https://co2.cnki.net/Login.html?dp=uestc');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/jwc.jpg)"></div>
+                <span class="bgm-item-titlemain">毕设管理</span></div>
+        <br/><br/>
+        </div>
+        </div>
+    </div>
+
+    <div id="modal_campus" class="modal">
+    <!-- 校园-弹窗内容 -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>校园生活</h2>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <br/><br/>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://jzsz.uestc.edu.cn/leave-vacation/index.html?appId=55');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">请销假</span></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('http://ecard.uestc.edu.cn/web/guest/personal');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg) ;height:60%"></div>
+                <span class="bgm-item-titlemain">一卡通门户</span></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://eportal.uestc.edu.cn/qljfwapp/sys/lwUestcDormElecPrepaid/index.do#/prepaid');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">寝室电费充值</span></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://hq.uestc.edu.cn/manage/dashboard/analysis');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">智慧后勤管理平台</span></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://eportal.uestc.edu.cn/qljfwapp/sys/lwUestcShuttleBusQuery/index.do#/queryBus');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">校车查询</span></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://jzsz.uestc.edu.cn/epidemic');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">疫情填报</span></div>
+        <br/><br/>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://bbs.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/bbs.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">清水河畔BBS</span></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://mp.weixin.qq.com/a/~EmHagPA5JHSvwD7yTgCtwg~~');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/wechat.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">后勤报修(Wechat)</span></div>
+        <br/><br/>
+        </div>
+        </div>
+    </div>
+        
+    <div id="model_network" class="modal">
+    <!-- 网络-弹窗内容 -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>网络服务</h2>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+        <br/>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://aaa.uestc.edu.cn');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">网络自服务</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://vpn.uestc.edu.cn/portal/#!/login');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg) ;height:50%"></div>
+                <span class="bgm-item-titlemain">学校VPN</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://mail.std.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">校园邮箱</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://userms.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">正版软件</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://vi.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vi.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">VI系统</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://reservelib.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vi.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">图书馆预约</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aea1989.tech');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">[友链]AEA Home</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://ms-uestc-edu-cn-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vpn.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">[VPN]正版软件</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://vi-uestc-edu-cn-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vpn.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">[VPN]VI系统</span></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aaa-uestc-edu-cn-s.vpn.uestc.edu.cn:8118/s');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vpn.jpg);height:50%"></div>
+                <span class="bgm-item-titlemain">[VPN]网络自服务</span></div>
+        <br/><br/>
+        </div>
+        </div>
+    </div>
+        
+    <div id="model_academic" class="modal">
+    <!-- 学术-弹窗内容 -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>科研/数据</h2>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+        <br/>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('https://www.lib.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/library.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">八角书斋</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('https://cxxl.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/dachaung.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">大创系统</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://reservelib-uestc-edu-cn-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/library.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">[V]自习室预约</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://gx-jd-com-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/jd.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">[V]狗东读书</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://www-cnki-net-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/cnki.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">[VPN]CNKI</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://www-wanfangdata-com-cn-s.vpn.uestc.edu.cn:8118/index.html');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/wanfang.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">[VPN] 万方</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://www-keledge-com-s.vpn.uestc.edu.cn:8118/wrap/index');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/kezhi.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">[VPN]可知</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://www-sciencedirect-com-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/elsevier.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">Elsevier</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://link-springer-com-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/springerlink.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">Springer</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://www-pqdtcn-com-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/PQDT.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">PQDT</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://ieeexplore-ieee-org-s.vpn.uestc.edu.cn:8118/Xplore/home.jsp');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/IEEE.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">[VPN] IEEE</span></div>
+            <div class="cardhover" style="float: left;height: 120px;" onclick="window.open('http://www-engineeringvillage-com-s.vpn.uestc.edu.cn:8118/search/quick.url?CID=quickSearch&database=1');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/EI.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">[VPN] EI</span></div>
+            <div class="cardhover" style="float: left; height: 135px;" onclick="window.open('http://www-webofscience-com-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/sci.jpg);height:70%"></div>
+            <span class="bgm-item-titlemain">[VPN] SCI</span></div>
+            <div class="cardhover" style="float: left; width: 72%;height: 135px;" onclick="window.open('https://sci-hub.se/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/academic/scihub.jpg);height:70%;"></div>
+            <span class="bgm-item-titlemain">SCI-HUB</span></div>
+        </div>
+        </div>
+    </div>
+
+    <div id="model_passport" class="modal">
+    <!-- 通行证-弹窗内容 -->
+        <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>通行证</h2>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+        <br/>
+            <div class="cardhover" style="float: left; height: 150px; width: 30%;" onclick="alert('敬请期待');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/pass/west1.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">西门 出校码</span></div>
+            <div class="cardhover" style="float: left; height: 150px; width: 31%;" onclick="alert('敬请期待');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/pass/west1.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">西门 入校码</span></div>
+            <div class="cardhover" style="float: left; height: 150px; width: 30%;" onclick="alert('敬请期待');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/pass/west2.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">西二门 出校码</span></div>
+            <div class="cardhover" style="float: left; height: 150px; width: 30%;" onclick="alert('敬请期待');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/pass/west2.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">西二门 入校码</span></div>
+            <div class="cardhover" style="float: left; height: 150px; width: 31%;" onclick="alert('敬请期待');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/pass/maingate.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">南门 出校码</span></div>
+            <div class="cardhover" style="float: left; height: 150px; width: 30%;" onclick="alert('敬请期待');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/pass/maingate.jpg);height:55%"></div>
+            <span class="bgm-item-titlemain">南门 入校码</span></div>
+            <div class="cardhover" style="float: left; height: 220px; width: 97%;" onclick="window.open('https://ur.alipay.com/6n21C6');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/pass/tianfu.jpg);height:60%"></div>
+            <br/><span class="bgm-item-titlemain">天府健康码</span></div>
+        </div>
+        </div>
+    </div>
+    <!-- END弹窗内容 -->
+
+    <script type="text/javascript" id="kratos-js-extra">
+    /* <![CDATA[ */
+    var xb = {"thome":"https:\/\/www.zerolite.cn\/wp-content\/themes\/kratos","ctime":"10\/02\/2016 00:00:00","alipay":"https:\/\/www.zerolite.cn\/wp-content\/uploads\/2020\/09\/QRWE.jpg","wechat":"https:\/\/www.zerolite.cn\/wp-content\/uploads\/2020\/09\/QRWE.jpg","copy":"1","ajax_url":"https:\/\/www.zerolite.cn\/wp-admin\/admin-ajax.php","order":"desc","owo":"https:\/\/www.zerolite.cn\/wp-content\/themes\/kratos","site_sh":"61"};
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="UESTX_files/kratos.js" id="kratos-js"></script>
+    
+    <!--切换标签实现网页标题变化-->
+    <script type="text/javascript">
+        /*自动刷新页面，避免无法访问*/
+        var OriginTitile = document.title;
+        var titleTime;
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                            document.title = '404啦！!!!∑(ﾟДﾟノ)ノ ';
+                clearTimeout(titleTime);
+                        }
+            else {
+                            document.title = '哈哈，骗你的！ヾ(ﾟ∀ﾟゞ)';
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile;
+                }, 3000);
+                        }
+        });
+
+    </script>
+
+    <!-- 鼠标特效 -->
+    <script type="text/javascript">
+        var a_idx = 0;
+        jQuery(document).ready(function($) {
+            $("body").click(function(e) {
+                var a = new Array("技术宅", "二次元(bushi!)", "小白", "富有想象", "*:ஐ٩(๑´ᵕ`)۶ஐ:* 学习使我进步", "(๑*◡*๑)", "✧*｡٩(ˊᗜˋ*)و✧*｡" ,"（づ￣3￣）づ╭❤～", "╰( ´・ω・)つ──☆✿✿✿", "充满激情", "(((┏(;￣▽￣)┛装完逼就跑", "熬夜成瘾(,,•﹏•,,)");
+                var $i = $("<span />").text(a[a_idx]);
+                a_idx = (a_idx + 1) % a.length;
+                var x = e.pageX,
+                    y = e.pageY;
+                $i.css({
+                    "z-index": 99999999999999999999999999999999999999999999999999999999999999999999999999 ,
+                    "top": y - 20,
+                    "left": x,
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "color": "#ff7bb0"
+                });
+                $("body").append($i);
+                $i.animate({
+                        "top": y - 180,
+                        "opacity": 0
+                    },
+                    1500,
+                    function() {
+                        $i.remove();
+                    });
+            });
+        });
+    </script>
+
+    <!-- 弹窗JS -->
+    <script type="text/javascript">
+        // 获取弹窗
+        var model_login = document.getElementById('model_login');
+        var model_course = document.getElementById('model_course');
+        var model_campus = document.getElementById('modal_campus');
+        var model_network = document.getElementById('model_network');
+        var model_academic = document.getElementById('model_academic');
+        var model_passport = document.getElementById('model_passport');
+
+        // 打开弹窗的按钮对象
+        var btn_login = document.getElementById("login");
+        var btn_course = document.getElementById("course");
+        var btn_campus = document.getElementById("campus");
+        var btn_network = document.getElementById("network");
+        var btn_academic = document.getElementById("academic");
+        var btn_passport = document.getElementById("passport");
+
+        // 获取 <span> 元素，用于关闭弹窗 that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        var span1 = document.getElementsByClassName("close")[1];
+        var span2 = document.getElementsByClassName("close")[2];
+        var span3 = document.getElementsByClassName("close")[3];
+        var span4 = document.getElementsByClassName("close")[4];
+        var span5 = document.getElementsByClassName("close")[5];
+
+        // 点击按钮打开弹窗
+        btn_login.onclick = function() {model_login.style.display = "block";}
+        btn_course.onclick = function() {model_course.style.display = "block";}
+        btn_campus.onclick = function() {model_campus.style.display = "block";}
+        btn_network.onclick = function() {model_network.style.display = "block";}
+        btn_academic.onclick = function() {model_academic.style.display = "block";}
+        btn_passport.onclick = function() {model_passport.style.display = "block";}
+
+        // 点击 <span> (x), 关闭弹窗
+        span.onclick = function() {model_login.style.display = "none";}
+        span1.onclick = function() {model_course.style.display = "none";}
+        span2.onclick = function() {model_campus.style.display = "none";}
+        span3.onclick = function() {model_network.style.display = "none";}
+        span4.onclick = function() {model_academic.style.display = "none";}
+        span5.onclick = function() {model_passport.style.display = "none";}
+
+        // 在用户点击其他地方时，关闭弹窗
+        window.onclick = function(event) {
+            if (event.target == model_login) {
+                model_login.style.display = "none";
+            }
+            if (event.target == model_course) {
+                model_course.style.display = "none";
+            }
+            if (event.target == model_campus) {
+                model_campus.style.display = "none";
+            }
+            if (event.target == model_network) {
+                model_network.style.display = "none";
+            }
+            if (event.target == model_academic) {
+                model_academic.style.display = "none";
+            }
+            if (event.target == model_passport) {
+                model_passport.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
