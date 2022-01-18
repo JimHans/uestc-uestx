@@ -1,4 +1,11 @@
-# UESTX
+![avatar](./main.png)
+
+<h1 align="center"> UESTX </h1>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Version-0.1.0 Alpha-red.svg?style=flat-square">
+<img src="https://img.shields.io/badge/Developer-JimHan-blue.svg?style=flat-square">
+</p>
 ## The polymerization of all frequently-used UESTC online services.
 ## 电子科技大学 线上服务集合索引
 
