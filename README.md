@@ -1,9 +1,9 @@
 ![avatar](./main.png)
 
-<h1 align="center"> UESTX </h1>
+<h1 align="center"> UESTC-UESTX </h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Version-0.2.0 Alpha-red.svg?style=flat-square">
+<img src="https://img.shields.io/badge/Version-0.2.5 Alpha-red.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Developer-JimHan-blue.svg?style=flat-square">
 </p>
 
