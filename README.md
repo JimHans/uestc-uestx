@@ -24,7 +24,7 @@
 - 已知：智慧后勤管理平台目前已暂停服务
 
 ---
-本项目已经通过 Github Pages 托管，您可以通过访问 https://jimhans.github.io/uestx/ 来访问本项目。
+本项目已经通过 Github Pages 托管，您可以通过访问 https://jimhans.github.io/uestc-uestx/ 来访问本项目。
 如果您有新的需要提交的链接，请通过 Issues 进行提交。
 
 - 当然如果您认为头图太丑/您有更好的想法，也可以直接pull Requests
