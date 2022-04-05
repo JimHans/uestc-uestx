@@ -15,6 +15,6 @@ self.addEventListener('install', function (e) {
       return cache.addAll(URLS);
     }).then(_ => {
       return self.skipWaiting();
-    });
-  );
+    }
+  ))
 });
