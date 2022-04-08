@@ -3,7 +3,7 @@
 <h1 align="center"> UESTC-UESTX </h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Version-0.9.0 Beta-red.svg?style=flat-square">
+<img src="https://img.shields.io/badge/Version-0.10.0 Beta-red.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Developer-JimHan-blue.svg?style=flat-square">
 </p>
 
@@ -11,10 +11,10 @@
 ## 💻电子科技大学 线上服务集合索引
 
 ### 📚 Target: Include all the online services, including Wechat Applets
-### 📚 目标任务：聚合所有线上服务，包括对微信小程序服务的拉起（暂时没想到怎么实现），实现对多种终端的完美显示适配。
+### 📚 目标任务：聚合所有线上服务，包括对微信小程序服务的拉起（暂时没想到怎么实现），实现对多种终端的完美显示适配，并添加根据场景的智能服务推荐功能。
 ---
 ### 📤 功能更新
-- 预计更新：加入PWA功能支持！
+- 22-04-09 正式加入PWA功能支持！您现在可以将UESTX安装至您的移动设备桌面
 - 22-03-16 更新了一卡通支付宝链接，优化显示
 - 22-02-17 更新了精准思政与教务系统登录按钮
 - 22-02-14 更新了uestc-temperature自动填报系统友链
