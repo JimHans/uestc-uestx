@@ -45,11 +45,3 @@ async function networkFirst(req) {
     return await cache.match(req);
   }
 }
-
-self.addEventListener("install", async event => {
-  console.log('sw install');
-});
-
-self.addEventListener("fetch", async event => {
-  console.log('sw fetch');
-});
