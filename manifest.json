@@ -1,8 +1,8 @@
 {
-  "name": "UESTX - UESTC Homepage",
+  "name": "UESTX - UESTC Global Homepage",
   "short_name": "UESTX",
   "description": "UESTX -- PWA",
-  "start_url": "./index.html",
+  "start_url": "/uestc-uestx/index.html",
   "display": "standalone",
   "theme_color": "#004098",
   "background_color": "#fff",
