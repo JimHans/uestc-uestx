@@ -95,7 +95,7 @@
         function clear() {
             body.style.left="0px";
             body.style.position="relative";
-            sider.style.visibility=" hidden";
+            //sider.style.visibility=" hidden";
         }
         var $clone = $('#kratos-menu-wrap').clone();
         $clone.attr({
