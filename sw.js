@@ -53,8 +53,3 @@ self.addEventListener("install", async event => {
 self.addEventListener("fetch", async event => {
   console.log('sw fetch');
 });
-
-window.addEventListener('beforeinstallprompt', e => {
-  e.preventDefault();
-  e.prompt(); //这个方法为显示安装弹窗
-})
