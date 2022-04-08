@@ -6,7 +6,7 @@
   "scope": "/uestc-uestx/",
   "display": "standalone",
   "theme_color": "#1e2021",
-  "background_color": "#fff",
+  "background_color": "#1e2021",
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",
