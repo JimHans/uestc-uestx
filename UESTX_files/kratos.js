@@ -34,30 +34,30 @@
         });
         $('#searchform').on('click',function(e){e.stopPropagation();})
     }
-    var showlove = function(){
-        $.fn.postLike = function(){
-            if($(this).hasClass('done')){
-                layer.msg('您已经支持过了',function(){});
-                return false;
-            }else{
-                $(this).addClass('done');
-                layer.msg('感谢您的支持');
-                var id = $(this).data('id'),
-                    action = $(this).data('action'),
-                    rateHolder = $(this).children('.count');
-                var ajax_data = {
-                    action:'love',
-                    um_id:id,
-                    um_action:action
-                };
-                $.post(xb.ajax_url,ajax_data,function(data){
-                    $(rateHolder).html(data);
-                });
-                return false;
-            }
-        };
-        $(document).on('click','.Love',function(){$(this).postLike();});
-    }
+    // var showlove = function(){
+    //     $.fn.postLike = function(){
+    //         if($(this).hasClass('done')){
+    //             layer.msg('您已经支持过了',function(){});
+    //             return false;
+    //         }else{
+    //             $(this).addClass('done');
+    //             layer.msg('感谢您的支持');
+    //             var id = $(this).data('id'),
+    //                 action = $(this).data('action'),
+    //                 rateHolder = $(this).children('.count');
+    //             var ajax_data = {
+    //                 action:'love',
+    //                 um_id:id,
+    //                 um_action:action
+    //             };
+    //             $.post(xb.ajax_url,ajax_data,function(data){
+    //                 $(rateHolder).html(data);
+    //             });
+    //             return false;
+    //         }
+    //     };
+    //     $(document).on('click','.Love',function(){$(this).postLike();});
+    // }
     var gotop = function(){
         $('.gotop-box').on('click',function(event){
             event.preventDefault();
@@ -89,57 +89,57 @@
             anim: 0
         });
     }
-    var offcanvas = function(){
-        var body=document.getElementById('kratos-wrapper');
-        var sider=document.getElementById('sider-bar');
-        function clear() {
-            body.style.left="0px";
-            body.style.position="relative";
-            sider.style.visibility=" hidden";
-        }
-        var $clone = $('#kratos-menu-wrap').clone();
-        $clone.attr({
-            'id':'offcanvas-menu',
-            'class':' '
-        });
-        $clone.find('> ul').attr({
-            'class':'ul-me',
-            'id':''
-        });
-        $('#sider-bar').prepend($clone);
-        $('.js-kratos-nav-toggle').on('click',function(){
-            if($('.nav-toggle').hasClass('toon')){
-                $('.nav-toggle').removeClass('toon');
-                $('#offcanvas-menu').css('left','-240px');
-                clear();
-            }else{
-                $('.nav-toggle').addClass('toon');
-                $('#offcanvas-menu').css('left','0px');
-                body.style.left="240px";
-                // body.style.position="fixed";
-                sider.style.visibility="visible";
-            }
-        });
-        $('#offcanvas-menu a').on('click',function(){
-            $('.nav-toggle').removeClass('toon');
-            $('#offcanvas-menu').css('left','-240px');
-            clear();
-        });
-        $('#offcanvas-menu').css('height',$(window).height());
-        $('#offcanvas-menu').css('left','-240px');
-        clear();
-        $(window).resize(function(){
-            var w = $(window);
-            $('#offcanvas-menu').css('height',w.height());
-            if(w.width()>769){
-                if($('.nav-toggle').hasClass('toon')){
-                    $('.nav-toggle').removeClass('toon');
-                    $('#offcanvas-menu').css('left','-240px');
-                    clear();
-                }
-            }
-        });
-    }
+    // var offcanvas = function(){
+    //     var body=document.getElementById('kratos-wrapper');
+    //     var sider=document.getElementById('sider-bar');
+    //     function clear() {
+    //         body.style.left="0px";
+    //         body.style.position="relative";
+    //         sider.style.visibility=" hidden";
+    //     }
+    //     var $clone = $('#kratos-menu-wrap').clone();
+    //     $clone.attr({
+    //         'id':'offcanvas-menu',
+    //         'class':' '
+    //     });
+    //     $clone.find('> ul').attr({
+    //         'class':'ul-me',
+    //         'id':''
+    //     });
+    //     $('#sider-bar').prepend($clone);
+    //     $('.js-kratos-nav-toggle').on('click',function(){
+    //         if($('.nav-toggle').hasClass('toon')){
+    //             $('.nav-toggle').removeClass('toon');
+    //             $('#offcanvas-menu').css('left','-240px');
+    //             clear();
+    //         }else{
+    //             $('.nav-toggle').addClass('toon');
+    //             $('#offcanvas-menu').css('left','0px');
+    //             body.style.left="240px";
+    //             // body.style.position="fixed";
+    //             sider.style.visibility="visible";
+    //         }
+    //     });
+    //     $('#offcanvas-menu a').on('click',function(){
+    //         $('.nav-toggle').removeClass('toon');
+    //         $('#offcanvas-menu').css('left','-240px');
+    //         clear();
+    //     });
+    //     $('#offcanvas-menu').css('height',$(window).height());
+    //     $('#offcanvas-menu').css('left','-240px');
+    //     clear();
+    //     $(window).resize(function(){
+    //         var w = $(window);
+    //         $('#offcanvas-menu').css('height',w.height());
+    //         if(w.width()>769){
+    //             if($('.nav-toggle').hasClass('toon')){
+    //                 $('.nav-toggle').removeClass('toon');
+    //                 $('#offcanvas-menu').css('left','-240px');
+    //                 clear();
+    //             }
+    //         }
+    //     });
+    // }
     var menu = function(){
         $(document).click(function(e){
             var container = $('#sider-bar,.js-kratos-nav-toggle');
@@ -172,36 +172,36 @@
             event.preventDefault();
         });
     }
-    var donateConfig = function(){
-        $(document).on('click','.Donate',function(){
-            layer.open({
-                type:1,
-                area:['300px', '370px'],
-                title:'打赏作者',
-                resize:false,
-                scrollbar:false,
-                content:'<div class="donate-box"><div class="meta-pay text-center"><strong>扫一扫支付</strong></div><div class="qr-pay text-center"><img class="pay-img" id="alipay_qr" src="'+xb.alipay+'"><img class="pay-img d-none" id="wechat_qr" src="'+xb.wechat+'"></div><div class="choose-pay text-center mt-2"><input id="alipay" type="radio" name="pay-method" checked><label for="alipay" class="pay-button"><img src="'+xb.thome+'/static/images/alipay.png"></label><input id="wechatpay" type="radio" name="pay-method"><label for="wechatpay" class="pay-button"><img src="'+xb.thome+'/static/images/wechat.png"></label></div></div>'
-            });
-            $('.choose-pay input[type="radio"]').click(function(){
-                var id= $(this).attr('id');
-                if(id=='alipay'){$('.qr-pay #alipay_qr').removeClass('d-none');$('.qr-pay #wechat_qr').addClass('d-none')};
-                if(id=='wechatpay'){$('.qr-pay #alipay_qr').addClass('d-none');$('.qr-pay #wechat_qr').removeClass('d-none')};
-            });
-        });
-    }
-    var OwOcfg = function(){
-        if($('#commentform').height()){
-            var OwO_demo = new OwO({
-                logo:'OωO表情',
-                container:document.getElementsByClassName('OwO')[0],
-                target:document.getElementsByClassName('OwO')[0],
-                api:xb.thome+'/inc/OwO.json',
-                position:'down',
-                width:'90%',
-                maxHeight:'250px'
-            });
-        }
-    }
+    // var donateConfig = function(){
+    //     $(document).on('click','.Donate',function(){
+    //         layer.open({
+    //             type:1,
+    //             area:['300px', '370px'],
+    //             title:'打赏作者',
+    //             resize:false,
+    //             scrollbar:false,
+    //             content:'<div class="donate-box"><div class="meta-pay text-center"><strong>扫一扫支付</strong></div><div class="qr-pay text-center"><img class="pay-img" id="alipay_qr" src="'+xb.alipay+'"><img class="pay-img d-none" id="wechat_qr" src="'+xb.wechat+'"></div><div class="choose-pay text-center mt-2"><input id="alipay" type="radio" name="pay-method" checked><label for="alipay" class="pay-button"><img src="'+xb.thome+'/static/images/alipay.png"></label><input id="wechatpay" type="radio" name="pay-method"><label for="wechatpay" class="pay-button"><img src="'+xb.thome+'/static/images/wechat.png"></label></div></div>'
+    //         });
+    //         $('.choose-pay input[type="radio"]').click(function(){
+    //             var id= $(this).attr('id');
+    //             if(id=='alipay'){$('.qr-pay #alipay_qr').removeClass('d-none');$('.qr-pay #wechat_qr').addClass('d-none')};
+    //             if(id=='wechatpay'){$('.qr-pay #alipay_qr').addClass('d-none');$('.qr-pay #wechat_qr').removeClass('d-none')};
+    //         });
+    //     });
+    // }
+    // var OwOcfg = function(){
+    //     if($('#commentform').height()){
+    //         var OwO_demo = new OwO({
+    //             logo:'OωO表情',
+    //             container:document.getElementsByClassName('OwO')[0],
+    //             target:document.getElementsByClassName('OwO')[0],
+    //             api:xb.thome+'/inc/OwO.json',
+    //             position:'down',
+    //             width:'90%',
+    //             maxHeight:'250px'
+    //         });
+    //     }
+    // }
     var APF = function(){
         var $this = $('#ap-footer');
         $.ajax({
@@ -284,11 +284,11 @@
     $(function(){
         gotop();
         sidebaraffix();
-        offcanvas();
+        //offcanvas();
         menu();
         toSearch();
         xControl();
-        showPhotos();
+        //showPhotos();
         donateConfig();
         showlove();
         shareMenu();
@@ -298,158 +298,158 @@
         if($('div').hasClass('xb-snow')) SnowF();
     });
 }());
-//comment ajax
-$('body').on('click','.comment-reply-link',function(){
-    if($(this).attr('onclick')) return;
-    addComment.moveForm($(this).attr('data-belowelement'),$(this).attr('data-commentid'),$(this).attr('data-respondelement'),$(this).attr('data-postid'));
-    return false;
-});
-jQuery(document).ready(function(jQuery) {
-    var __cancel = jQuery('#cancel-comment-reply-link'),
-        __cancel_text = __cancel.text(),
-        __list = 'comment-list';
-    jQuery(document).on('submit','#commentform',function(){
-        var that=this;
-        var uid,nickname,photo,hang,level;
-        //先获取uid
-        uid=$('#uid').val();
-        if(uid)
-        {
-            /*发出ajax请求获B站信息，已进行V3接口更新*/
-            myajax=$.ajax({
-                url:"https://xiaoyou66.com/api/v3/tools/bili_info/"+uid,
-                type:'get',
-                success:function(data){
-                    if(!data)
-                    {
-                        window.alert("uid错误,请重新填写！");
-                        return false;
-                    }
-                    var list=data;
-                    nickname=list.nickname;
-                    photo=list.avatar;
-                    level=list.level;
-                    hang=list.hang;
-                    $("#author").val(nickname);
-                }
-            });
-            /*等待ajax请求完毕*/
-            $.when(myajax).done(function () {
-                if(nickname)
-                {
-                    SetCookie('Buid',uid,365);
-                    jQuery.ajax({
-                        url:xb.ajax_url,
-                        data:jQuery(that).serialize()+'&photo='+photo+'&hang='+hang+'&level='+level+'&action=ajax_comment',
-                        type:jQuery(that).attr('method'),
-                        beforeSend:addComment.createButterbar('正在提交'),
-                        error:function(request){
-                            var t = addComment;
-                            t.createButterbar(request.responseText)
-                        },
-                        success:function(data){
-                            jQuery('textarea').each(function(){that.value = ''});
-                            var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
-                            if(parent!='0'){
-                                jQuery('#respond').before('<ol class="children">'+data+'</ol>')
-                            }else if(!jQuery('.'+__list).length){
-                                jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
-                            }else{
-                                if(xb.order=='asc'){
-                                    jQuery('.'+__list).append(data)
-                                }else{
-                                    jQuery('.'+__list).prepend(data)
-                                }
-                            }
-                            t.createButterbar('提交成功');
-                            cancel.style.display = 'none';
-                            cancel.onclick = null;
-                            t.I('comment_parent').value = '0';
-                            if(temp&&respond){
-                                temp.parentNode.insertBefore(respond,temp);
-                                temp.parentNode.removeChild(temp)
-                            }
-                        }
-                    });
-                }
-            });
-        }else
-        {
-            jQuery.ajax({
-                url:xb.ajax_url,
-                data:jQuery(this).serialize()+'&action=ajax_comment',
-                type:jQuery(this).attr('method'),
-                beforeSend:addComment.createButterbar('正在提交'),
-                error:function(request){
-                    var t = addComment;
-                    t.createButterbar(request.responseText)
-                },
-                success:function(data){
-                    jQuery('textarea').each(function(){this.value = ''});
-                    var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
-                    if(parent!='0'){
-                        jQuery('#respond').before('<ol class="children">'+data+'</ol>')
-                    }else if(!jQuery('.'+__list).length){
-                        jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
-                    }else{
-                        if(xb.order=='asc'){
-                            jQuery('.'+__list).append(data)
-                        }else{
-                            jQuery('.'+__list).prepend(data)
-                        }
-                    }
-                    t.createButterbar('提交成功');
-                    cancel.style.display = 'none';
-                    cancel.onclick = null;
-                    t.I('comment_parent').value = '0';
-                    if(temp&&respond){
-                        temp.parentNode.insertBefore(respond,temp);
-                        temp.parentNode.removeChild(temp)
-                    }
-                }
-            });
-        }
-        return false
-    });
-    addComment = {
-        moveForm:function(commId,parentId,respondId){
-            var t = this,div,comm = t.I(commId),respond = t.I(respondId),cancel = t.I('cancel-comment-reply-link'),parent = t.I('comment_parent'),post = t.I('comment_post_ID');
-            __cancel.text(__cancel_text);
-            t.respondId = respondId;
-            if(!t.I('wp-temp-form-div')){
-                div = document.createElement('div');
-                div.id = 'wp-temp-form-div';
-                div.style.display = 'none';
-                respond.parentNode.insertBefore(div,respond)
-            }!comm?(temp = t.I('wp-temp-form-div'),t.I('comment_parent').value = '0',temp.parentNode.insertBefore(respond,temp),temp.parentNode.removeChild(temp)):comm.parentNode.insertBefore(respond,comm.nextSibling);
-            jQuery('body').animate({
-                scrollTop:jQuery('#respond').offset().top-180
-            },400);
-            parent.value = parentId;
-            cancel.style.display = '';
-            cancel.onclick = function(){
-                var t = addComment,temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId);
-                t.I('comment_parent').value = '0';
-                if(temp&&respond){
-                    temp.parentNode.insertBefore(respond,temp);
-                    temp.parentNode.removeChild(temp)
-                }
-                this.style.display = 'none';
-                this.onclick = null;
-                return false
-            };
-            try{t.I('comment').focus()}catch(e){}
-            return false
-        },
-        I:function(e){
-            return document.getElementById(e)
-        },
-        createButterbar:function(message){
-            var t = this;
-            layer.msg(message)
-        }
-    }
-});
+// //comment ajax
+// $('body').on('click','.comment-reply-link',function(){
+//     if($(this).attr('onclick')) return;
+//     addComment.moveForm($(this).attr('data-belowelement'),$(this).attr('data-commentid'),$(this).attr('data-respondelement'),$(this).attr('data-postid'));
+//     return false;
+// });
+// jQuery(document).ready(function(jQuery) {
+//     var __cancel = jQuery('#cancel-comment-reply-link'),
+//         __cancel_text = __cancel.text(),
+//         __list = 'comment-list';
+//     jQuery(document).on('submit','#commentform',function(){
+//         var that=this;
+//         var uid,nickname,photo,hang,level;
+//         //先获取uid
+//         uid=$('#uid').val();
+//         if(uid)
+//         {
+//             /*发出ajax请求获B站信息，已进行V3接口更新*/
+//             myajax=$.ajax({
+//                 url:"https://xiaoyou66.com/api/v3/tools/bili_info/"+uid,
+//                 type:'get',
+//                 success:function(data){
+//                     if(!data)
+//                     {
+//                         window.alert("uid错误,请重新填写！");
+//                         return false;
+//                     }
+//                     var list=data;
+//                     nickname=list.nickname;
+//                     photo=list.avatar;
+//                     level=list.level;
+//                     hang=list.hang;
+//                     $("#author").val(nickname);
+//                 }
+//             });
+//             /*等待ajax请求完毕*/
+//             $.when(myajax).done(function () {
+//                 if(nickname)
+//                 {
+//                     SetCookie('Buid',uid,365);
+//                     jQuery.ajax({
+//                         url:xb.ajax_url,
+//                         data:jQuery(that).serialize()+'&photo='+photo+'&hang='+hang+'&level='+level+'&action=ajax_comment',
+//                         type:jQuery(that).attr('method'),
+//                         beforeSend:addComment.createButterbar('正在提交'),
+//                         error:function(request){
+//                             var t = addComment;
+//                             t.createButterbar(request.responseText)
+//                         },
+//                         success:function(data){
+//                             jQuery('textarea').each(function(){that.value = ''});
+//                             var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
+//                             if(parent!='0'){
+//                                 jQuery('#respond').before('<ol class="children">'+data+'</ol>')
+//                             }else if(!jQuery('.'+__list).length){
+//                                 jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
+//                             }else{
+//                                 if(xb.order=='asc'){
+//                                     jQuery('.'+__list).append(data)
+//                                 }else{
+//                                     jQuery('.'+__list).prepend(data)
+//                                 }
+//                             }
+//                             t.createButterbar('提交成功');
+//                             cancel.style.display = 'none';
+//                             cancel.onclick = null;
+//                             t.I('comment_parent').value = '0';
+//                             if(temp&&respond){
+//                                 temp.parentNode.insertBefore(respond,temp);
+//                                 temp.parentNode.removeChild(temp)
+//                             }
+//                         }
+//                     });
+//                 }
+//             });
+//         }else
+//         {
+//             jQuery.ajax({
+//                 url:xb.ajax_url,
+//                 data:jQuery(this).serialize()+'&action=ajax_comment',
+//                 type:jQuery(this).attr('method'),
+//                 beforeSend:addComment.createButterbar('正在提交'),
+//                 error:function(request){
+//                     var t = addComment;
+//                     t.createButterbar(request.responseText)
+//                 },
+//                 success:function(data){
+//                     jQuery('textarea').each(function(){this.value = ''});
+//                     var t = addComment,cancel = t.I('cancel-comment-reply-link'),temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId),post = t.I('comment_post_ID').value,parent = t.I('comment_parent').value;
+//                     if(parent!='0'){
+//                         jQuery('#respond').before('<ol class="children">'+data+'</ol>')
+//                     }else if(!jQuery('.'+__list).length){
+//                         jQuery('#comments-nav').before('<ol class="'+__list+'">'+data+'</ol>')
+//                     }else{
+//                         if(xb.order=='asc'){
+//                             jQuery('.'+__list).append(data)
+//                         }else{
+//                             jQuery('.'+__list).prepend(data)
+//                         }
+//                     }
+//                     t.createButterbar('提交成功');
+//                     cancel.style.display = 'none';
+//                     cancel.onclick = null;
+//                     t.I('comment_parent').value = '0';
+//                     if(temp&&respond){
+//                         temp.parentNode.insertBefore(respond,temp);
+//                         temp.parentNode.removeChild(temp)
+//                     }
+//                 }
+//             });
+//         }
+//         return false
+//     });
+//     addComment = {
+//         moveForm:function(commId,parentId,respondId){
+//             var t = this,div,comm = t.I(commId),respond = t.I(respondId),cancel = t.I('cancel-comment-reply-link'),parent = t.I('comment_parent'),post = t.I('comment_post_ID');
+//             __cancel.text(__cancel_text);
+//             t.respondId = respondId;
+//             if(!t.I('wp-temp-form-div')){
+//                 div = document.createElement('div');
+//                 div.id = 'wp-temp-form-div';
+//                 div.style.display = 'none';
+//                 respond.parentNode.insertBefore(div,respond)
+//             }!comm?(temp = t.I('wp-temp-form-div'),t.I('comment_parent').value = '0',temp.parentNode.insertBefore(respond,temp),temp.parentNode.removeChild(temp)):comm.parentNode.insertBefore(respond,comm.nextSibling);
+//             jQuery('body').animate({
+//                 scrollTop:jQuery('#respond').offset().top-180
+//             },400);
+//             parent.value = parentId;
+//             cancel.style.display = '';
+//             cancel.onclick = function(){
+//                 var t = addComment,temp = t.I('wp-temp-form-div'),respond = t.I(t.respondId);
+//                 t.I('comment_parent').value = '0';
+//                 if(temp&&respond){
+//                     temp.parentNode.insertBefore(respond,temp);
+//                     temp.parentNode.removeChild(temp)
+//                 }
+//                 this.style.display = 'none';
+//                 this.onclick = null;
+//                 return false
+//             };
+//             try{t.I('comment').focus()}catch(e){}
+//             return false
+//         },
+//         I:function(e){
+//             return document.getElementById(e)
+//         },
+//         createButterbar:function(message){
+//             var t = this;
+//             layer.msg(message)
+//         }
+//     }
+// });
 
 
 //time
@@ -469,7 +469,7 @@ function createtime(){
 
 setInterval('createtime()',250);
 //copy
-if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。请务必遵守本站条约！');}
+if(xb.copy) document.body.oncopy=function(){alert('已复制所选内容。');}
 
 
 //*********************************************************
@@ -501,43 +501,3 @@ function GetCookie(sName) {
     return null;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

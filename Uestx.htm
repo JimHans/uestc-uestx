@@ -61,14 +61,16 @@
         /* 弹窗 (background) */
         .modal {
             display: none; /* 默认隐藏 */
-            position: absolute; 
+            position: fixed; 
             z-index: 10; 
-            padding-top: 9%; 
-            left: 0;
+            /* padding-top: 5%;  */
             top: 0;
-            width: 100%; 
-            height: 100%; 
-            overflow: auto; 
+            right: 0;
+            bottom: 0;
+            left: 0;
+            /* width: 100%; 
+            height: 100%;  */
+            /* overflow: auto;  */
             border-radius: 0px;
             background-color: rgb(0,0,0); 
             background-color: rgba(0,0,0,0.4);
@@ -77,12 +79,15 @@
         /* 弹窗内容 */
         .modal-content {
             position: relative;
+            /* vertical-align: middle; */
             background-color: #fefefe;
             margin: auto;
-            padding: 0;
+            /* padding: 0; */
             border: 1px solid #888;
-            width: 80%;
-            height: 850px;
+            width: 85%;
+            height: 95%;
+            top: 10px;
+            /* height: 650px; */
             border-radius: 20px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
             -webkit-animation-name: animatetop;
@@ -91,30 +96,34 @@
             animation-duration: 0.4s
         }
         @media(max-width:768px){
-            .modal-content {            position: relative;
+            .modal-content {            
+            position: relative;
+            vertical-align: middle;
             background-color: #fefefe;
             margin: auto;
-            padding: 0;
+            /* padding: 0; */
+            height: 95%;
             border: 1px solid #888;
             width: 90%;
-            height: 650px;
+            top: 10px;
+            /* height: 650px; */
             border-radius: 20px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
             -webkit-animation-name: animatetop;
             -webkit-animation-duration: 0.4s;
             animation-name: animatetop;
             animation-duration: 0.4s}
-            .bgm-item-titlemain {text-overflow: ellipsis;color: #004098;font-weight: 500;font-size: 17px;text-shadow: 1px 1px 1px #dbdbdb;margin-bottom:8px;border-bottom: 2px solid #5a7fb8;}
+            .bgm-item-titlemain {text-overflow: ellipsis;color: #004098;font-weight: 1000;font-size: 15px;text-shadow: 1px 1px 1px #dbdbdb;margin-bottom:8px;border-bottom: 2px solid #5a7fb8;}
         }
 
         /* 添加动画 */
         @-webkit-keyframes animatetop {
-            from {top:-300px; opacity:0} 
+            from {top:-330px; opacity:0} 
             to {top:0; opacity:1}
         }
 
         @keyframes animatetop {
-            from {top:-300px; opacity:0}
+            from {top:-330px; opacity:0}
             to {top:0; opacity:1}
         }
 
@@ -140,8 +149,7 @@
             color: white;
         }
 
-        .modal-body {padding: 2px 16px;}
-
+        .modal-body {padding: 2px 16px;height:87%;overflow-y:scroll;}
         .modal-footer {
             padding: 2px 16px;
             background-color: #0077ed;
@@ -244,12 +252,12 @@
         </div>
         <div class="modal-body" style="text-align: center;">
             <br/>
-            <div class="cardhover" style="width:30%; float: left; height: 500px;margin-top: 5%;" onclick="window.open('https://idas.uestc.edu.cn/authserver/login');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/login.jpg)"></div>
-                <br/><span class="bgm-item-titlemain">校园通行证登录<br/><br/>点击后，在新窗口进行通行证登录</span></div>
-            <div class="cardhover" style="width:30%; float: left; height: 500px;margin-top: 5%;" onclick="window.open('http://eams.uestc.edu.cn/eams');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/login.jpg)"></div>
-                <br/><span class="bgm-item-titlemain">教务系统主站<br/>点击后，可打开教务系统主站<br/>之后即可使用本主页内课程表功能</span></div>
-            <div class="cardhover" style="width:30%; float: left; height: 500px;margin-top: 5%;" onclick="window.open('https://jzsz.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/login.jpg)"></div>
-                <br/><span class="bgm-item-titlemain">精准思政主站<br/>点击后，可打开精准思政获取授权<br/>之后即可使用本主页精准思政功能</span></div>
+            <div class="cardhover" style="width:95%; float: left; height: 300px;margin-top: 5%;" onclick="window.open('https://idas.uestc.edu.cn/authserver/login');"><div class="card-thumb" style="background-image:url(./UESTX_files/pic/uestc.png)"></div>
+                <br/><span class="bgm-item-titlemain">校园通行证登录<br/>点击后，在新窗口进行通行证登录</span></div>
+            <div class="cardhover" style="width:95%; float: left; height: 300px;margin-top: 5%;" onclick="window.open('http://eams.uestc.edu.cn/eams');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/login.jpg)"></div>
+                <br/><span class="bgm-item-titlemain">教务系统主站<br/>点击后，可打开教务系统主站之后即可使用本主页内课程表功能</span></div>
+            <div class="cardhover" style="width:95%; float: left; height: 300px;margin-top: 5%;" onclick="window.open('https://jzsz.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/login.jpg)"></div>
+                <br/><span class="bgm-item-titlemain">精准思政主站<br/>点击后，可打开精准思政获取授权之后即可使用本主页精准思政功能</span></div>
         </div>
         </div>
     </div>
@@ -338,11 +346,11 @@
             <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://mp.weixin.qq.com/a/~EmHagPA5JHSvwD7yTgCtwg~~');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/wechat.jpg);height:60%"></div>
                 <span class="bgm-item-titlemain">后勤报修(Wechat)</span></div>
         <br/><br/>
-            <div class="cardhover" style="float: left; height: 190px;" onclick="window.open('https://github.com/mrcaidev/uestc-temperature');"><div class="card-thumb" style="background-image:url(https://avatars.githubusercontent.com/u/78269445?v=4);height:60%"></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://github.com/mrcaidev/uestc-temperature');"><div class="card-thumb" style="background-image:url(https://avatars.githubusercontent.com/u/78269445?v=4);height:60%"></div>
                 <span class="bgm-item-titlemain">uestc-temperature</span></div>
-            <div class="cardhover" style="float: left; height: 190px;" onclick="window.open('https://ur.alipay.com/1ckBJe');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/cardalipay.jpg);height:60%"></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://ur.alipay.com/1ckBJe');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/cardalipay.jpg);height:60%"></div>
                 <span class="bgm-item-titlemain">一卡通门户(Alipay)</span></div>
-            <div class="cardhover" style="float: left; height: 190px;" onclick="window.open('https://dxpx.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/wechat.jpg);height:60%"></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://dxpx.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/wechat.jpg);height:60%"></div>
                 <span class="bgm-item-titlemain">党校在线教学平台</span></div>
         </div>
         </div>
