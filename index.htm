@@ -593,7 +593,7 @@
         }
     </script>
 
-    <!-- 版本切换 -->
+    <!-- 版本切换&mobile适配 -->
     <script type="text/javascript">
         // 获取切换文字
         var SwitchVer = document.getElementById('SwitchVer');
@@ -613,6 +613,15 @@
             {localStorage.setItem("2chVer",false);location.reload();}
             else {localStorage.setItem("2chVer",true);location.reload();}            
         }
+
+        if(/Mobi|Android|iPhone/i.test(navigator.userAgent))
+        { 
+            var x = document.getElementsByClassName("bgm-item-titlemain");
+            var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.fontSize = "12px"
+				}
+            console.log("android!")}
     </script>
 </body>
 </html>
