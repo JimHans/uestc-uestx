@@ -3,7 +3,7 @@
 <h1 align="center"> UESTC-UESTX </h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Version-0.11.0 PreRelease-red.svg?style=flat-square">
+<img src="https://img.shields.io/badge/Version-1.0.1 PreRelease-red.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Developer-JimHan-blue.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Language-HTML5&CSS3-pink.svg?style=flat-square">
 </p>
@@ -15,6 +15,7 @@
 ### 📚 目标任务：聚合所有线上服务（进行中），包括对微信小程序服务的拉起（暂时没想到怎么实现），实现对多种终端的完美显示适配（已完成），并添加根据场景的智能服务推荐功能（在做了）。
 ---
 ### 📤 功能更新
+- 22-07-05合并了2ch Ver与标准版，通过cookie存储选项；修复移动端文字溢出问题；部分图片优化体积；加入部分选项的新图片，正式发布1.0版本，开始填坑V1.5
 - 22-06-21大幅优化弹窗UI！不仅修复了错版问题，还优化了弹窗位置，现在弹窗将固定在屏幕上不会乱动，且加入了内部选项的滑动支持。
 - 22-04-09 正式加入PWA功能支持！您现在可以将UESTX安装至您的移动设备桌面
 - 22-03-16 更新了一卡通支付宝链接，优化显示
