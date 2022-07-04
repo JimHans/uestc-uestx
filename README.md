@@ -3,7 +3,7 @@
 <h1 align="center"> UESTC-UESTX </h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Version-1.0.1 PreRelease-red.svg?style=flat-square">
+<img src="https://img.shields.io/badge/Version-1.0.1 Release-red.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Developer-JimHan-blue.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Language-HTML5&CSS3-pink.svg?style=flat-square">
 </p>
