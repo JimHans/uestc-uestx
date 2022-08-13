@@ -289,10 +289,10 @@
         toSearch();
         xControl();
         //showPhotos();
-        donateConfig();
-        showlove();
+        // donateConfig();
+        // showlove();
         shareMenu();
-        OwOcfg();
+        // OwOcfg();
         wechatpic();
         if($('div').hasClass('aplayer-footer')) APF();
         if($('div').hasClass('xb-snow')) SnowF();
