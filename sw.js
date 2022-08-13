@@ -4,7 +4,8 @@ const URLS = [                // Add URL you want to cache in this list.
   // '/',                     // If you have separate JS/CSS files, add path to those files here
   './index.htm',
   './UESTX_files/animate.css',
-  './UESTX_files/jquery.js'
+  './UESTX_files/jquery.js',
+  './UESTX_files/pic/'
 ];
  
 // Cache resources

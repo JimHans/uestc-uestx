@@ -28,6 +28,10 @@
     <script type="text/javascript" src="UESTX_files/jquery.js" id="theme-jq-js"></script>
 
     <style>
+        ::-webkit-scrollbar {
+            display:none;
+        }
+
         #offcanvas-menu{background:#3a3f51}
         .affix{top:61px}
         .kratos-cover.kratos-cover_2{background-image:url(https://oss.zerolite.cn/BANNER-3.png)}
@@ -80,13 +84,14 @@
         .modal-content {
             position: relative;
             /* vertical-align: middle; */
-            background-color: #fefefe;
+            /* background-color: #fefefe; */
             margin: auto;
             /* padding: 0; */
             border: 1px solid #888;
             width: 85%;
             height: 95%;
             top: 10px;
+            backdrop-filter: blur(50px);
             /* height: 650px; */
             border-radius: 20px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -149,7 +154,7 @@
             color: white;
         }
 
-        .modal-body {padding: 2px 16px;height:87%;overflow-y:scroll;}
+        .modal-body {padding: 2px 16px;height:87%;overflow-y:auto;}
         .modal-footer {
             padding: 2px 16px;
             background-color: #0077ed;
@@ -350,6 +355,8 @@
                 <span class="bgm-item-titlemain">uestc-temp</span></div>
             <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://ur.alipay.com/1ckBJe');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/cardalipay.jpg);height:60%"></div>
                 <span class="bgm-item-titlemain">一卡通门户(Alipay)</span></div>
+            <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://render.alipay.com/p/s/i/?scheme=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000042%26publicBizType%3DLIFE_APP%26publicId%3D2017052207313814%26sourceId%3DsettingShare%26chInfo%3Dch_share__chsub_CopyLink%26fxzjshareChinfo%3Dch_share__chsub_CopyLink%26apshareid%3Dc0c8b399-c147-4ff1-ad93-09dbac2596a4%26shareBizType%3DLIFESTYLE_SHARE');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/cardalipay.jpg);height:60%"></div>
+                <span class="bgm-item-titlemain">缴费大厅(Alipay)</span></div>
             <div class="cardhover" style="float: left; height: 200px;" onclick="window.open('https://dxpx.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/wechat.jpg);height:60%"></div>
                 <span class="bgm-item-titlemain">党校在线教学平台</span></div>
         </div>
@@ -365,19 +372,19 @@
         </div>
         <div class="modal-body" style="text-align: center;">
         <br/>
-            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aaa.uestc.edu.cn');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg);height:50%"></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aaa.uestc.edu.cn');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/selfservice.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">网络自服务</span></div>
-            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://vpn.uestc.edu.cn/portal/#!/login');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg) ;height:50%"></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://vpn.uestc.edu.cn/portal/#!/login');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vpns.jpg) ;height:50%"></div>
                 <span class="bgm-item-titlemain">学校VPN</span></div>
-            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://mail.std.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg);height:50%"></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://mail.std.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/campmail.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">校园邮箱</span></div>
-            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://userms.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/net.jpg);height:50%"></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://userms.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/software.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">正版软件</span></div>
             <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('https://vi.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vi.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">VI系统</span></div>
-            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://reservelib.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vi.jpg);height:50%"></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://reservelib.uestc.edu.cn/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/library.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">图书馆预约</span></div>
-            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aea1989.tech');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:50%"></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aea1989.tech');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/AEA.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">AEA Home</span></div>
             <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://ms-uestc-edu-cn-s.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vpn.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">[VPN]正版软件</span></div>
@@ -385,7 +392,7 @@
                 <span class="bgm-item-titlemain">[VPN]VI系统</span></div>
             <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aaa-uestc-edu-cn-s.vpn.uestc.edu.cn:8118/s');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/vpn.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">[VPN]网络自服务</span></div>
-            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aea1989-tech.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/campuslife/campservices.jpg);height:50%"></div>
+            <div class="cardhover" style="float: left; height: 150px;" onclick="window.open('http://aea1989-tech.vpn.uestc.edu.cn:8118/');"><div class="card-thumb" style="background-image:url(UESTX_files/pic/network/AEA.jpg);height:50%"></div>
                 <span class="bgm-item-titlemain">[VPN] AEA Home</span></div>
         <br/><br/>
         </div>
