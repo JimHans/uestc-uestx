@@ -1,7 +1,7 @@
 {
   "name": "UESTX - UESTC Global Homepage",
   "short_name": "UESTX",
-  "description": "UESTX -- PWA",
+  "description": "UESTX -- PWA v1.2",
   "start_url": "/uestc-uestx/",
   "scope": "/uestc-uestx/",
   "display": "standalone",
