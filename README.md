@@ -3,7 +3,7 @@
 <h1 align="center"> UESTC-UESTX </h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Version-1.1.0 Release-red.svg?style=flat-square">
+<img src="https://img.shields.io/badge/Version-1.2.0 Release-red.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Developer-JimHan-blue.svg?style=flat-square">
 <img src="https://img.shields.io/badge/Language-HTML5&CSS3-pink.svg?style=flat-square">
 </p>
@@ -15,6 +15,7 @@
 ### 📚 目标任务：聚合所有线上服务（进行中），包括对微信小程序服务的拉起（暂时没想到怎么实现），实现对多种终端的完美显示适配（已完成），并添加根据场景的智能服务推荐功能（在做了）。
 ---
 ### 📤 功能更新
+- 22-10-02 V1.2 加入主页卡片的封面图标，更易辨识
 - 22-08-13 V1.1 加入更多卡片新封面，新增缴费大厅，新增高斯模糊背景卡片
 - 22-07-05 V1.0.1 加入校园生活内卡片新封面，V1.1开始开发
 - 22-07-05 V1.0 合并了2ch Ver与标准版，通过cookie存储选项；修复移动端文字溢出问题；部分图片优化体积；正式发布1.0版本，开始填坑V1.5
